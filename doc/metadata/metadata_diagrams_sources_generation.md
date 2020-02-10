@@ -1,15 +1,18 @@
-> **Note** - github is currently lacks embedded support for drawing diagrams
-Therefore, in order to generate and embed diagrams into the readme we employ the following technique:
+# metadata\_diagrams\_sources\_generation
 
-- Generate and Draw chart with https://stackedit.io/editor .The site's [main page](https://stackedit.io/) provides a comprehensive list of examples for formatting both text and diagrams.
-Expo
-- Export the diagram into svg with this [online tool](https://bramp.github.io/js-sequence-diagrams/)
-- Use external tool ,such as [Inkscape](https://inkscape.org/en/download/windows/) to convert from svg to png, or other raster format.  
-- Embed the resulted raster image into Markdown file
+> **Note** - github is currently lacks embedded support for drawing diagrams Therefore, in order to generate and embed diagrams into the readme we employ the following technique:
 
+* Generate and Draw chart with [https://stackedit.io/editor](https://stackedit.io/editor) .The site's [main page](https://stackedit.io/) provides a comprehensive list of examples for formatting both text and diagrams.
+
+  Expo
+
+* Export the diagram into svg with this [online tool](https://bramp.github.io/js-sequence-diagrams/)
+* Use external tool ,such as [Inkscape](https://inkscape.org/en/download/windows/) to convert from svg to png, or other raster format.  
+* Embed the resulted raster image into Markdown file
 
 Source code for diagram generators
-```sequence
+
+```text
 title: RS4xx - Registration for metadata attributes
 Participant C++ main
 Participant rs2_context
@@ -34,7 +37,7 @@ rs2_device-->C++ main:
 Note over C++ main: device with metadata support is ready
 ```
 
-```sequence
+```text
 title: RS4xx - Metadata attributes propagation and query flow
 Participant User Code
 Participant rs2_device
@@ -58,3 +61,4 @@ rs2_frame-->rs2_frame_callback: result (true/false)
 rs2_frame_callback->rs2_frame: query metadata attribute value
 rs2_frame-->rs2_frame_callback: value(/exception)
 ```
+

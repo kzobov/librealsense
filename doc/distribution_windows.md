@@ -2,47 +2,44 @@
 
 **Intel® RealSense™ SDK 2.0** provides tools and binaries for the Windows platform using [GitHub Releases](https://github.com/IntelRealSense/librealsense/releases)
 
-> To build from source, please follow the steps described [here](./installation_windows.md)
+> To build from source, please follow the steps described [here](installation_windows.md)
 
-After plugging the camera into a USB3 port, you should be able to see the newly connected device in the Device Manager: 
-![Windows Device Manager: Imaging Devices](./img/win_deploy_device_manager.PNG)
+After plugging the camera into a USB3 port, you should be able to see the newly connected device in the Device Manager: ![Windows Device Manager: Imaging Devices](../.gitbook/assets/win_deploy_device_manager.PNG)
 
 ## Intel RealSense Viewer
 
-- Go to the [latest stable release](https://github.com/IntelRealSense/librealsense/releases/latest), navigate to the **Assets** section, download and run **Intel.RealSense.Viewer.exe**:
-![GitHub Downloads](./img/win_deploy_downloads.PNG)
+* Go to the [latest stable release](https://github.com/IntelRealSense/librealsense/releases/latest), navigate to the **Assets** section, download and run **Intel.RealSense.Viewer.exe**: ![GitHub Downloads](../.gitbook/assets/win_deploy_downloads.PNG)
+* Explore the depth data:
 
-- Explore the depth data:
-
-![Viewer](./img/windows_viewer_preview.PNG)
+![Viewer](../.gitbook/assets/windows_viewer_preview.PNG)
 
 ## Installing the SDK
 
 * Go to the [latest stable release](https://github.com/IntelRealSense/librealsense/releases/latest), navigate to the **Assets** section, download and run **Intel.RealSense.SDK.exe**:
-
 * Click through several simple steps of the installer:
-1. Intel® RealSense™ SDK 2.0 is distributed under the [Apache 2.0](../LICENSE) permissive open-source license:
+* Intel® RealSense™ SDK 2.0 is distributed under the [Apache 2.0](https://github.com/kzobov/librealsense/tree/7148f9ae1d78b5d44bee4fc578bf0b8fb9a220c5/LICENSE/README.md) permissive open-source license:
 
-![Step 1](./img/win_step1.PNG)
+![Step 1](../.gitbook/assets/win_step1.PNG)
 
-2.  The SDK includes the RealSense Viewer, as well as development packages for various programming languages:
+1. The SDK includes the RealSense Viewer, as well as development packages for various programming languages:
 
-![Step 2](./img/win_step2.PNG)
+![Step 2](../.gitbook/assets/win_step2.PNG)
 
-3. Approve adding two shortcuts to your desktop:
+1. Approve adding two shortcuts to your desktop:
 
- ![Step 3](./img/win_step3.PNG)
+   ![Step 3](../.gitbook/assets/win_step3.PNG)
 
-4. Review before installing:
+2. Review before installing:
 
-![Step 4](./img/win_step4.PNG)
+![Step 4](../.gitbook/assets/win_step4.PNG)
 
-5. Open the `Intel® RealSense™ Samples`solution:
+1. Open the `Intel® RealSense™ Samples`solution:
 
-![Step 5](./img/win_shortcuts.PNG)
+![Step 5](../.gitbook/assets/win_shortcuts.PNG)
 
-6. Press `F5` to compile and run the demos:
+1. Press `F5` to compile and run the demos:
 
-![Step 6](./img/win_samples.PNG)
+![Step 6](../.gitbook/assets/win_samples.PNG)
 
-7. Success!
+1. Success!
+

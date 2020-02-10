@@ -1,0 +1,4 @@
+# Utils
+
+{ "name": "Utils", "references": \[ "RealSense" \], "optionalUnityReferences": \[\], "includePlatforms": \[\], "excludePlatforms": \[\], "allowUnsafeCode": false }
+

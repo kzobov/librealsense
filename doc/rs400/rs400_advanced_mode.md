@@ -1,24 +1,29 @@
 # RS400 Advanced Mode
 
 ## Overview
-RS400 is the newest in the series of stereo-based RealSense devices. It is provided in a number distinct models, all sharing the same depth-from-stereo ASIC. The models differ in optics, global vs. rolling shutter, and the projector capabilities. In addition, different use-cases may introduce different lighting conditions, aim at different range, etc...
-As a result, depth-from-stereo algorithm in the hardware has to be able to adjust to vastly different stereo input images.
 
-To achieve this goal, RS400 ASIC provides an extended set of controls aimed at advanced users, allowing to fine-tune the depth generation process. (and some other like **color-correction**)
+RS400 is the newest in the series of stereo-based RealSense devices. It is provided in a number distinct models, all sharing the same depth-from-stereo ASIC. The models differ in optics, global vs. rolling shutter, and the projector capabilities. In addition, different use-cases may introduce different lighting conditions, aim at different range, etc... As a result, depth-from-stereo algorithm in the hardware has to be able to adjust to vastly different stereo input images.
 
-Advanced mode hardware APIs are designed to be **safe**, in the sense that the user can't brick the device. You always have the option to exit advanced mode, and fall back to default mode of operation.
-However, while tinkering with the advanced controls, depth quality and stream frame-rate are not guarantied. You are making changes on your own risk.
+To achieve this goal, RS400 ASIC provides an extended set of controls aimed at advanced users, allowing to fine-tune the depth generation process. \(and some other like **color-correction**\)
+
+Advanced mode hardware APIs are designed to be **safe**, in the sense that the user can't brick the device. You always have the option to exit advanced mode, and fall back to default mode of operation. However, while tinkering with the advanced controls, depth quality and stream frame-rate are not guarantied. You are making changes on your own risk.
 
 ## Long-term vs. Short-term
+
 * In the short-term, librealsense provides a set of advanced APIs you can use to access advanced mode. Since, this includes as much as 100 new parameters we also provide a way to serialize and load these parameters, using JSON file structure. We encourage the community to explore the range of possibilities and share interesting presets for different use-cases. The limitation of this approach is that the existing protocol is cumbersome and not efficient. We can't provide clear estimate on how much time it will take until any set of controls will take effect, and the controls are not standard in any way in the OS.
 * In the long-term, Intel algorithm developers will come up with best set of recommended presets, as well as most popular presets from our customers, and these will be hard-coded into the camera firmware.
-This will provide fast, reliable way to optimize the device for a specific use case.
+
+  This will provide fast, reliable way to optimize the device for a specific use case.
 
 ## Programming Interface
- Here are some examples of how to use the advanced-mode API via C and C++.<br>
- 
- ### Advanced Mode C API
- The following code sample checking if the connected device is in advanced-mode and moving it to advance-mode if it's not.
+
+Here are some examples of how to use the advanced-mode API via C and C++.  
+
+
+### Advanced Mode C API
+
+The following code sample checking if the connected device is in advanced-mode and moving it to advance-mode if it's not.
+
 ```c
 /* Include the librealsense C header files */
 #include <librealsense2/rs.h>
@@ -81,8 +86,8 @@ int main()
 }
 ```
 
-The following code sample showing how to serialize the current values of advanced mode controls to a JSON file,
-and also how to load and apply it to the device.
+The following code sample showing how to serialize the current values of advanced mode controls to a JSON file, and also how to load and apply it to the device.
+
 ```c
 /* Include the librealsense C header files */
 #include <librealsense2/rs.h>
@@ -163,7 +168,8 @@ int main()
 }
 ```
 
-The following code sample showing how to retrieve the advanced-mode control values. 
+The following code sample showing how to retrieve the advanced-mode control values.
+
 ```c
 /* Include the librealsense C header files */
 #include <librealsense2/rs.h>
@@ -241,7 +247,9 @@ int main()
 ```
 
 ### Advanced Mode C++ API
+
 The following sample code showing how to enable advanced-mode in a connected D400 device.
+
 ```cpp
 /* Include the librealsense CPP header files */
 #include <librealsense2/rs.hpp>
@@ -297,7 +305,8 @@ catch (const exception & e)
 }
 ```
 
-The following code sample showing how to retrieve the advanced-mode control values. 
+The following code sample showing how to retrieve the advanced-mode control values.
+
 ```cpp
 /* Include the librealsense CPP header files */
 #include <librealsense2/rs.hpp>
@@ -355,4 +364,6 @@ catch (const exception & e)
     return EXIT_FAILURE;
 }
 ```
-*Note: It is recommended to set advanced mode controls when not streaming.*
+
+_Note: It is recommended to set advanced mode controls when not streaming._
+
