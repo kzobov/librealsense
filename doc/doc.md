@@ -32,7 +32,7 @@
 * [Error Handling](error_handling.md) - Documents librealsense error handling policy
 * Device specific topics:
   * [D400 at realsense.intel.com/](https://realsense.intel.com/stereo) - Camera specifications
-  * [D400 Advanced Mode](rs400/rs400_advanced_mode.md) - Overview of the Advanced Mode APIs
+  * [D400 Advanced Mode](rs400_advanced_mode-1.md) - Overview of the Advanced Mode APIs
   * [D400 cameras with Raspberry Pi](raspberrypi3.md) - Example of low-end system without USB3 interface
   * [D400 cameras on **rooted** Android device](android/android.md) - Instructions of how to build the RealSense SDK for Android OS.
 * [Record and Playback](../src/media/media.md) - SDK Record and Playback functionality using ROS-bag file format
